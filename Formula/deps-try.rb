@@ -14,7 +14,7 @@ class DepsTry < Formula
 
     (bin/"deps-try").write <<~EOS
       #!/bin/sh
-      exec "#{Formula["babashka"].opt_bin}/bb" "#{libexec}/deps-try.jar"
+      exec "#{Formula["babashka"].opt_bin}/bb" "#{libexec}/deps-try.jar" "$@"
     EOS
   end
 
