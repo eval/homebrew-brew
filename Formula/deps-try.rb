@@ -7,6 +7,7 @@ class DepsTry < Formula
 
   version "0.3.6"
 
+  depends_on "clojure/tools/clojure"
   depends_on "borkdude/brew/babashka"
 
   def install
