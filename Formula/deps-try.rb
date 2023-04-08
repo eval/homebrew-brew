@@ -1,15 +1,20 @@
 class DepsTry < Formula
   desc "Try out Clojure libraries on rebel-readline"
   homepage "https://github.com/eval/deps-try"
-  url "https://github.com/eval/deps-try/releases/download/v0.3.8/deps-try.jar"
-  sha256 "19e7bdc992115823f461b5e005af55d5a64b004b49181c9321370b23536d8a70"
+  url "https://github.com/eval/deps-try/releases/download/v0.3.9/deps-try.zip"
+  sha256 "d2ed407df7f77614e781e58718ba1027b987ae66fc2f2766953a0ac8c3155bb9"
   license "MIT"
-  head "https://github.com/eval/deps-try/releases/download/unstable/deps-try.jar"
+  head "https://github.com/eval/deps-try/releases/download/unstable/deps-try.zip"
 
   depends_on "borkdude/brew/babashka"
   depends_on "clojure/tools/clojure"
 
   def install
+    with_env(
+      "CLJ_CACHE" => ".cpcache",
+    ) do
+      system "bb", "uberjar", "deps-try.jar", "-m", "eval.deps-try"
+    end
     libexec.install "deps-try.jar"
 
     (bin/"deps-try").write <<~EOS
@@ -19,6 +24,6 @@ class DepsTry < Formula
   end
 
   test do
-    `deps-try -h`
+    `deps-try -v`
   end
 end
