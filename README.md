@@ -18,3 +18,12 @@ $ brew reinstall deps-try
 $ brew audit --tap=eval/brew
 $ brew style --fix eval/brew
 ```
+
+## Links
+
+- [Repository](https://github.com/eval/homebrew-brew)
+
+### Formulae
+
+- [deps-try](https://github.com/eval/homebrew-brew/blob/main/Formula/deps-try.rb)
+- [venster](https://github.com/eval/homebrew-brew/blob/main/Formula/venster.rb)
