@@ -1,8 +1,8 @@
-class DepsTry < Formula
+class DepsTryAT0100 < Formula
   desc "Try out Clojure libraries on rebel-readline"
   homepage "https://github.com/eval/deps-try"
-  url "https://github.com/eval/deps-try/releases/download/v0.12.0/deps-try-bb.jar"
-  sha256 "42f7f9f59690620a9b6d5a92df337a9a46f9a71ec6b01a167ce9966c454badda"
+  url "https://github.com/eval/deps-try/releases/download/v0.10.0/deps-try-bb.jar"
+  sha256 "da05a2b9e8813224bd6febb661ec59b71212b4ffccad7342a16a4a279bc8fc24"
   license "MIT"
   head "https://github.com/eval/deps-try/releases/download/unstable/deps-try-bb.jar"
 
