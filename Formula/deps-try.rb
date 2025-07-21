@@ -6,8 +6,8 @@ class DepsTry < Formula
   license "MIT"
   head "https://github.com/eval/deps-try/releases/download/unstable/deps-try-bb.jar"
 
-  depends_on "borkdude/brew/babashka"
-  depends_on "clojure/tools/clojure"
+  depends_on "babashka"
+  depends_on "clojure"
 
   def install
     libexec.install "deps-try-bb.jar"
